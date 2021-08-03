@@ -31,7 +31,7 @@ from Config import (
     STRING10,
     SUDO,
 )
-from Utils import RAID, RRAID
+from Utils import RAID, RRAID, PANDIT
 
 a = API_ID
 b = API_HASH

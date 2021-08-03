@@ -307,6 +307,55 @@ async def gifspam(e, smex):
         )
     except Exception:
         pass
+    
+  
+@idk.on(events.NewMessage(incoming=True, pattern=r"\.raidop"))
+@ydk.on(events.NewMessage(incoming=True, pattern=r"\.raidop"))
+@wdk.on(events.NewMessage(incoming=True, pattern=r"\.raidop"))
+@hdk.on(events.NewMessage(incoming=True, pattern=r"\.raidop"))
+@sdk.on(events.NewMessage(incoming=True, pattern=r"\.raidop"))
+@adk.on(events.NewMessage(incoming=True, pattern=r"\.raidop"))
+@bdk.on(events.NewMessage(incoming=True, pattern=r"\.raidop"))
+@cdk.on(events.NewMessage(incoming=True, pattern=r"\.raidop"))
+@edk.on(events.NewMessage(incoming=True, pattern=r"\.raidop"))
+@ddk.on(events.NewMessage(incoming=True, pattern=r"\.raidop"))
+async def spam(e):
+    usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗥𝗮𝗶𝗱OP\n\nCommand:\n\n.raidop <count> <Username of User>\n\n.raidop <count> <reply to a User>\n\nCount must be a integer."
+    if e.sender_id in SMEX_USERS:
+        if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
+            return await e.reply(usage, parse_mode=None, link_preview=None)
+        Lallan = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
+        await e.get_reply_message()
+        if len(Lallan) == 2:
+            message = str(Lallan[1])
+            print(message)
+            a = await e.client.get_entity(message)
+            g = a.id
+            c = a.first_name
+            username = f"[{c}](tg://user?id={g})"
+            counter = int(Lallan[0])
+            for _ in range(counter):
+                reply = random.choice(PANDIT)
+                caption = f"{username} {reply}"
+                async with e.client.action(e.chat_id, "typing"):
+                    await e.client.send_message(e.chat_id, caption)
+                    await asyncio.sleep(0.3)
+        elif e.reply_to_msg_id:
+            a = await e.get_reply_message()
+            b = await e.client.get_entity(a.sender_id)
+            g = b.id
+            c = b.first_name
+            counter = int(Lallan[0])
+            username = f"[{c}](tg://user?id={g})"
+            for _ in range(counter):
+                reply = random.choice(PANDIT)
+                caption = f"{username} {reply}"
+                async with e.client.action(e.chat_id, "typing"):
+                    await e.client.send_message(e.chat_id, caption)
+                    await asyncio.sleep(0.3)
+        else:
+            await e.reply(usage, parse_mode=None, link_preview=None)
+
 
 
 @idk.on(events.NewMessage(incoming=True, pattern=r"\.join"))

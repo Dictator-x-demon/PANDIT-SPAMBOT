@@ -15,6 +15,7 @@ from telethon.sessions import StringSession
 from telethon.tl import functions, types
 from telethon.tl.functions.channels import GetFullChannelRequest, LeaveChannelRequest
 from telethon.tl.functions.messages import GetFullChatRequest, ImportChatInviteRequest
+from Utils import RAID, RRAID
 
 from Config import (
     API_HASH,
@@ -31,7 +32,6 @@ from Config import (
     STRING10,
     SUDO,
 )
-from Utils import RAID, RRAID
 
 a = API_ID
 b = API_HASH

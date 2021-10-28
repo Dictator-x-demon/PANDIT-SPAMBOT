@@ -752,7 +752,7 @@ async def ping(e):
         end = datetime.now()
         ms = (end - start).microseconds / 1000
         await event.edit(
-            f"🤖 𝗣𝗼𝗻𝗴!\n`{ms}` 𝗺𝘀\n ✨Pᴀɴᴅɪᴛ ᴏᴘ 👀✨ 「🇨🇦 ᴛʜᴇ ਲੁੱਚਾ\n\n ELITE BOY REMDY BOY , PANDIT KA 7 JANMO KA BETA 🙈💋"
+            f"🤖 𝗣𝗼𝗻𝗴!\n`{ms}` 𝗺𝘀\n ✨Տ℘ᗩʍ ᗷ๏ƬՏ"
         )
 
 
@@ -938,7 +938,7 @@ text = """
 
 print(text)
 print("")
-print("BHOSHDIKO CHAL GYA H BOT AB JAKE SPAM ME GAAND MARAO KAHI.........")
+print("here you go kido..")
 if len(sys.argv) not in (1, 3, 4):
     try:
         idk.disconnect()
